@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git branch: 'main', url:'https://github.com/VedantBansal07/flask-app'
+                git branch: 'main', url: 'https://github.com/VedantBansal07/flask-app'
             }
         }
 
@@ -13,8 +13,7 @@ pipeline {
             steps {
                 sh '''
                 python3 -m venv venv
-                ./venv/bin/pip install -r 
-                requirements.txt
+                ./venv/bin/pip install -r requirements.txt
                 '''
             }
         }
@@ -30,4 +29,3 @@ pipeline {
         }
     }
 }
-
